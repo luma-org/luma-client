@@ -127,6 +127,12 @@
 		fetchRewardData();
 	}
 
+	$: selectedProjectStore.subscribe((value) => {
+		if (value) {
+			formData.projectId = value;
+		}
+	});
+
 	onMount(() => {
 		fetchProjectsByUser();
 		fetchIcons();
