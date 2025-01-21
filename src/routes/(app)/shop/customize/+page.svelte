@@ -249,14 +249,14 @@
 						<span>{reward.totalAvailable}</span>
 						<span>{reward.totalBought}/{reward.totalCapacity}</span>
 					</div>
-					{#if reward.available === false}
+					{#if reward.available === false && !isProjectLeader}
 						<button
 							class="w-full bg-primary/20 text-primary font-bold py-1 rounded-md cursor-not-allowed"
 							disabled
 						>
 							{$t('shop_customize.bought')}
 						</button>
-					{:else}
+					{:else if !isProjectLeader}
 						<button
 							class="w-full bg-primary text-white font-bold py-1 rounded-md flex items-center justify-center gap-2
 						hover:filter hover:brightness-90"
