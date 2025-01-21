@@ -85,7 +85,7 @@
 	<div class="faq-questions">
 		<p class="title">{$t('faq.faq_title')}</p>
 
-		{#each [1,2,3,4,5,6,7,8,9,10,11,12,13,14] as index}
+		{#each [1,2,3,4,5,6,7,8,9,10,11,12] as index}
 			<div class="question" id={index}>
 				<p class="q-title {selectedQuestion === index? 'selected' : ''}">
 					{index}.  {$t('faq.title_' + index)}
@@ -99,7 +99,7 @@
 
 	<aside class="faq-nav">
 		<p>{$t('faq.on_this_page')}</p>
-		{#each [1,2,3,4,5,6,7,8,9,10,11,12,13,14] as index}
+		{#each [1,2,3,4,5,6,7,8,9,10,11,12] as index}
 			<div class="nav {selectedQuestion === index? 'selected' : ''}">
 				<a href="#{index}" on:click={() => selectedQuestion = index}>
 					<p>{$t('faq.title_' + index)}</p>
