@@ -221,7 +221,7 @@
 						// Generic error toast
 						showToast($t('create_reward.create_error'), { type: 'error', duration: 5000 });
 					});
-				selectedProjectStore.set('0');
+				// selectedProjectStore.set('0');
 				selectedProjectStore.set(formData.projectId);
 			}
 			close();
@@ -248,7 +248,7 @@
 				<br />
 				<p class="project-name">{$t('create_reward.project_name')}</p>
 				<select
-					class="select select-bordered w-full max-w-xs"
+					class="select select-bordered w-full"
 					bind:value={formData.projectId}
 					disabled={isEdit}
 					required
