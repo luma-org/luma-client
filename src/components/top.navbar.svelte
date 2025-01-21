@@ -150,7 +150,7 @@
 			<div class="dropdown-menu">
 				<div class="user-info">
 					<h3>{user.firstName} {user.lastName}</h3>
-					<p>{userMail}</p>
+					<p  class="truncate-email">{userMail}</p>
 				</div>
 
 				<div class="divider" />
@@ -207,15 +207,16 @@
 		cursor: pointer;
 	}
 
-	.dropdown-menu-container {
-		position: absolute;
-		top: 80%;
-		right: 1.3rem;
-		width: 250px;
-		max-height: 0px;
-		overflow: hidden;
-		z-index: 9999;
-	}
+		.dropdown-menu-container {
+			position: absolute;
+			top: 80%;
+			right: 1.3rem;
+			width: 250px;
+			max-height: 0px;
+			overflow: hidden;
+			z-index: 9999;
+		}
+
 	.dropdown-menu-container.open {
 		max-height: 400px;
 	}
@@ -227,6 +228,14 @@
 		padding: 20px;
 		margin: 10px;
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	}
+
+	.dropdown-menu .user-info .truncate-email{
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
 	}
 
 	.left {
