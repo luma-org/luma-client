@@ -35,7 +35,8 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-    height: 83.5vh;
-    overflow-y: scroll;
+    	height: 83.5vh;
+    	overflow-y: scroll;
+		background-color: white;
 	}
 </style>
