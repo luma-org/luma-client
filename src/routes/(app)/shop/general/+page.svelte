@@ -36,8 +36,8 @@
 		await fetchThemes();
 		await fetchRewards();
 		// Cargar tema activo desde localStorage o usar predeterminado
-		const savedThemeId = parseInt(localStorage.getItem('activeThemeId')) || 4;
-		const savedTheme = customThemes.find((theme) => theme.id === savedThemeId);
+		const savedThemeName = localStorage.getItem('activeTheme');
+		const savedTheme = customThemes.find((theme) => theme.name === savedThemeName);
 		if (savedTheme) {
 			setTheme(savedTheme, false);
 		}
@@ -145,8 +145,8 @@
 		};
 
 		if (save) {
-			localStorage.setItem('activeThemeId', theme.id);
-			console.log('Tema activo guardado:', theme.id);
+			localStorage.setItem('activeTheme', theme.name);
+			console.log('Tema activo guardado:', theme.name);
 		}
 	}
 
