@@ -8,6 +8,16 @@
 	%sveltekit.head%
 </head>
 
+<script>
+	// Obtener el tema guardado desde localStorage
+	const savedTheme = localStorage.getItem('activeTheme');
+	if (savedTheme) {
+		// Establecer el tema en el atributo `data-theme` de <html>
+		document.querySelector('html').setAttribute('data-theme', savedTheme);
+		console.log('savedTheme', savedTheme);
+	}
+</script>
+
 <body data-sveltekit-preload-data="hover">
 	<!--	<body>-->
 	<div style="display: contents">%sveltekit.body%</div>
